@@ -13,11 +13,9 @@ module.exports = {
     rollup: {
       plugins: [
         require("rollup-plugin-svelte")({
-          emitCss: true,
+          include: ["./node_modules"],
         }),
         require("rollup-plugin-postcss")({
-          extract: true,
-          minimize: true,
           use: [
             [
               "sass",
